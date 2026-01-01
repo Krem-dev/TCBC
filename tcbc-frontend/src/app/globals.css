@@ -213,10 +213,10 @@
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(17, 51, 102, 0.3);
+    box-shadow: 0 0 20px rgba(72, 0, 126, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(17, 51, 102, 0.6);
+    box-shadow: 0 0 40px rgba(72, 0, 126, 0.6);
   }
 }
 
@@ -315,22 +315,22 @@
 }
 
 .hero-btn.primary {
-  background-color: #11336e;
+  background-color: #48007e;
   color: white;
 }
 
 .hero-btn.secondary {
-  background-color: #11336e;
+  background-color: #48007e;
   color: #fff;
 }
 
 .hero-btn.primary:hover {
-  background-color: #0f264e;
+  background-color: #7c01cd;
   transform: scale(1.05);
 }
 
 .hero-btn.secondary:hover {
-  background-color: #11336e;
+  background-color: #48007e;
   transform: scale(1.05);
   color: #eff1f4;
 }

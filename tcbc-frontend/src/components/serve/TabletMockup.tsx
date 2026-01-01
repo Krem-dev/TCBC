@@ -26,6 +26,7 @@ export default function TabletMockup({
   const [allowMotion, setAllowMotion] = useState(true);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const update = () => setAllowMotion(!mq.matches);
     update();

@@ -89,8 +89,8 @@ function VideoCard() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#0f2a54] lg:text-5xl">
-            Experience Worship <span className="text-[#1a4b9c]">Together</span>
+          <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#48007e] lg:text-5xl">
+            Experience Worship <span className="text-[#7c01cd]">Together</span>
           </h2>
           <p className="text-[15px] sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-1">
             Join us for powerful worship services, inspiring messages, and authentic community. 
@@ -135,7 +135,7 @@ function VideoCard() {
                 playsInline
                 muted
                 preload={isMobile ? "none" : "metadata"}
-                poster="/images/heartlink_bg.jpg"
+                poster="/video-theumbnail.jpg"
                 controls={showControls || hasPlayed}
                 onLoadedMetadata={() => setLoading(false)}
                 onLoadedData={() => setLoading(false)}
@@ -156,7 +156,7 @@ function VideoCard() {
                 onClick={() => playVideo()}
                 aria-label="TCBC worship experience video"
               >
-                <source src="/videos/heartlinkinaction.mp4" type="video/mp4" />
+                <source src="/videos/chag.mp4" type="video/mp4" />
               </video>
 
               {loading && !error && (

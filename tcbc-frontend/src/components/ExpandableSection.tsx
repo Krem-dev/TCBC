@@ -28,6 +28,7 @@ function MonitorMockup({
   const len = images?.length ?? 0;
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const measure = () => setVw(viewportRef.current?.clientWidth ?? 0);
     measure();
     window.addEventListener("resize", measure);
@@ -204,10 +205,10 @@ const ExpandableSection = () => {
       icon: <Activity className="h-6 w-6" aria-hidden="true" />,
       mockupType: "tablet",
       screenshots: [
-        "/images/screens/kiosk1.jpg",
-        "/images/screens/kiosk3.jpg",
-        "/images/screens/kiosk2.jpg",
-        "/images/screens/kiosk4.jpg",
+        "/bib-4.jpg",
+        "/bible-1.jpg",
+        "/bible-2.jpg",
+        "/30th Nov_24.jpg",
       ],
       features: [
         "Study guides",
@@ -235,9 +236,9 @@ const ExpandableSection = () => {
     <section className="bg-gradient-to-br from-gray-50 to-white py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#0f2a54] lg:text-5xl">
+          <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#48007e] lg:text-5xl">
             Deepen Your{" "}
-            <span className="text-[#1a4b9c]">Faith</span>
+            <span className="text-[#7c01cd]">Faith</span>
           </h2>
           <p className="font-aeonik mx-auto max-w-3xl text-lg text-gray-600">
             Engage with Scripture and grow in your understanding of God's Word through our interactive Bible study platform
@@ -257,10 +258,10 @@ const ExpandableSection = () => {
                     }`}
                   >
                     <div className="flex items-center gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#1a4b9c]/10 text-[#1a4b9c]">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#7c01cd]/10 text-[#7c01cd]">
                         {section.icon}
                       </div>
-                      <h3 className="font-satoshi text-left text-xl font-semibold text-[#0f2a54]">
+                      <h3 className="font-satoshi text-left text-xl font-semibold text-[#48007e]">
                         {section.title}
                       </h3>
                     </div>
@@ -292,7 +293,7 @@ const ExpandableSection = () => {
                                 key={feature}
                                 className="flex items-center gap-2"
                               >
-                                <div className="h-1.5 w-1.5 rounded-full bg-[#1a4b9c]" />
+                                <div className="h-1.5 w-1.5 rounded-full bg-[#7c01cd]" />
                                 <span className="font-aeonik text-sm text-gray-600">
                                   {feature}
                                 </span>
@@ -361,9 +362,9 @@ const ExpandableSection = () => {
                     className="absolute inset-0 flex items-center justify-center"
                   >
                     <div className="text-center">
-                      <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#113366]/20">
+                      <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-[#48007e]/20">
                         <Heart
-                          className="h-10 w-10 text-[#113366]"
+                          className="h-10 w-10 text-[#48007e]"
                           aria-hidden="true"
                         />
                       </div>

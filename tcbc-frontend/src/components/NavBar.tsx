@@ -36,6 +36,7 @@ const NavBar = () => {
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -108,7 +109,7 @@ const NavBar = () => {
                 />
                 <span
                   className="font-satoshi text-sm sm:text-base font-bold whitespace-nowrap"
-                  style={{ color: "#113366" }}
+                  style={{ color: "#48007e" }}
                 >
                   The Chosen Bible Church
                 </span>
@@ -117,13 +118,13 @@ const NavBar = () => {
               <div className="flex items-center space-x-2">
                 <div
                   className="w-8 h-8 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: "#113366" }}
+                  style={{ backgroundColor: "#48007e" }}
                 >
                   <span className="text-white font-bold text-sm">T</span>
                 </div>
                 <span
                   className="font-satoshi text-lg sm:text-xl font-bold whitespace-nowrap"
-                  style={{ color: "#113366" }}
+                  style={{ color: "#48007e" }}
                 >
                   TCBC
                 </span>
@@ -149,9 +150,9 @@ const NavBar = () => {
                               : ""
                           }`}
                           style={{
-                            color: isActive(item.href) ? "#113366" : "#6b7280",
+                            color: isActive(item.href) ? "#48007e" : "#6b7280",
                             borderColor: isActive(item.href)
-                              ? "#113366"
+                              ? "#48007e"
                               : "transparent",
                           }}
                         >
@@ -167,9 +168,9 @@ const NavBar = () => {
                               : ""
                           }`}
                           style={{
-                            color: isSermonsActive() ? "#113366" : "#6b7280",
+                            color: isSermonsActive() ? "#48007e" : "#6b7280",
                             borderColor: isSermonsActive()
-                              ? "#113366"
+                              ? "#48007e"
                               : "transparent",
                           }}
                           aria-haspopup="true"
@@ -191,7 +192,7 @@ const NavBar = () => {
                             >
                               <div
                                 className="font-aeonik font-medium"
-                                style={{ color: "#113366" }}
+                                style={{ color: "#48007e" }}
                               >
                                 {sermon.label}
                               </div>
@@ -206,9 +207,9 @@ const NavBar = () => {
                             isEventsActive() ? "font-bold border-b-2 pb-1" : ""
                           }`}
                           style={{
-                            color: isEventsActive() ? "#113366" : "#6b7280",
+                            color: isEventsActive() ? "#48007e" : "#6b7280",
                             borderColor: isEventsActive()
-                              ? "#113366"
+                              ? "#48007e"
                               : "transparent",
                           }}
                           aria-haspopup="true"
@@ -230,7 +231,7 @@ const NavBar = () => {
                             >
                               <div
                                 className="font-aeonik font-medium"
-                                style={{ color: "#113366" }}
+                                style={{ color: "#48007e" }}
                               >
                                 {link.label}
                               </div>
@@ -267,15 +268,15 @@ const NavBar = () => {
         <div className="hidden lg:flex items-center gap-3">
           <Link
             href="/prayer-request"
-            className="rounded-full font-aeonik font-semibold text-[#11336e] border-2 transition-all duration-300 hover:bg-[#11336e]/5 px-5 py-2 text-sm xl:px-6 xl:py-2 xl:text-base"
-            style={{ borderColor: "#11336e" }}
+            className="rounded-full font-aeonik font-semibold text-[#48007e] border-2 transition-all duration-300 hover:bg-[#48007e]/5 px-5 py-2 text-sm xl:px-6 xl:py-2 xl:text-base"
+            style={{ borderColor: "#48007e" }}
           >
             Prayer Request
           </Link>
           <Link
             href="/give"
             className="rounded-full font-aeonik font-semibold text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg px-5 py-2 text-sm xl:px-6 xl:py-2 xl:text-base"
-            style={{ backgroundColor: "#11336e" }}
+            style={{ backgroundColor: "#48007e" }}
           >
             Give
           </Link>
@@ -292,19 +293,19 @@ const NavBar = () => {
               className={`block w-5 h-0.5 transition-all duration-300 ${
                 menuOpen ? "rotate-45 translate-y-1" : "mb-1"
               }`}
-              style={{ backgroundColor: "#113366" }}
+              style={{ backgroundColor: "#48007e" }}
             />
             <span
               className={`block w-5 h-0.5 transition-all duration-300 ${
                 menuOpen ? "opacity-0" : "mb-1"
               }`}
-              style={{ backgroundColor: "#113366" }}
+              style={{ backgroundColor: "#48007e" }}
             />
             <span
               className={`block w-5 h-0.5 transition-all duration-300 ${
                 menuOpen ? "-rotate-45 -translate-y-1" : ""
               }`}
-              style={{ backgroundColor: "#113366" }}
+              style={{ backgroundColor: "#48007e" }}
             />
           </div>
         </button>
@@ -325,7 +326,7 @@ const NavBar = () => {
                     isActive(item.href) ? "font-bold" : ""
                   }`}
                   style={{
-                    color: isActive(item.href) ? "#113366" : "#6b7280",
+                    color: isActive(item.href) ? "#48007e" : "#6b7280",
                     backgroundColor: isActive(item.href)
                       ? "#eff1f4"
                       : "transparent",
@@ -344,7 +345,7 @@ const NavBar = () => {
                   if (newState) setMobileEventsOpen(false);
                 }}
                 className="flex justify-between items-center w-full px-6 py-3 font-aeonik font-medium transition-colors duration-300 hover:opacity-80"
-                style={{ color: isSermonsActive() ? "#113366" : "#6b7280" }}
+                style={{ color: isSermonsActive() ? "#48007e" : "#6b7280" }}
                 aria-expanded={mobileSermonsOpen}
                 aria-controls="mobile-sermons-panel"
               >
@@ -366,7 +367,7 @@ const NavBar = () => {
                         isActive(sermon.href) ? "font-bold" : ""
                       }`}
                       style={{
-                        color: isActive(sermon.href) ? "#113366" : "#6b7280",
+                        color: isActive(sermon.href) ? "#48007e" : "#6b7280",
                         backgroundColor: isActive(sermon.href)
                           ? "#eff1f4"
                           : "transparent",
@@ -387,7 +388,7 @@ const NavBar = () => {
                   if (newState) setMobileSermonsOpen(false);
                 }}
                 className="flex justify-between items-center w-full px-6 py-3 font-aeonik font-medium transition-colors duration-300 hover:opacity-80"
-                style={{ color: isEventsActive() ? "#113366" : "#6b7280" }}
+                style={{ color: isEventsActive() ? "#48007e" : "#6b7280" }}
                 aria-expanded={mobileEventsOpen}
                 aria-controls="mobile-events-panel"
               >
@@ -410,7 +411,7 @@ const NavBar = () => {
                         isActive(link.href) ? "font-bold" : ""
                       }`}
                       style={{
-                        color: isActive(link.href) ? "#113366" : "#6b7280",
+                        color: isActive(link.href) ? "#48007e" : "#6b7280",
                         backgroundColor: isActive(link.href)
                           ? "#eff1f4"
                           : "transparent",

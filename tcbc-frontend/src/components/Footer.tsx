@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faInstagram,
-  faXTwitter,
+  faYoutube,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
@@ -55,25 +55,25 @@ const Footer = () => {
   const socialLinks: Social[] = [
     {
       name: "Facebook",
-      href: "https://facebook.com/tcbc",
+      href: "https://web.facebook.com/profile.php?id=61571964212983",
       description: "Connect with us on Facebook",
       icon: faFacebook,
       color: "hover:bg-blue-800",
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/tcbc",
+      href: "https://www.instagram.com/tcbc_ottawa?igsh=MWtmd2doemwycHFn",
       description: "Follow us on Instagram",
       icon: faInstagram,
       color:
         "hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600",
     },
     {
-      name: "X (Twitter)",
-      href: "https://twitter.com/tcbc",
-      description: "Follow us on X",
-      icon: faXTwitter,
-      color: "hover:bg-black",
+      name: "YouTube",
+      href: "https://www.youtube.com/@tcbc_ottawa",
+      description: "Subscribe to us on YouTube",
+      icon: faYoutube,
+      color: "hover:bg-red-600",
     },
   ];
 
@@ -105,7 +105,7 @@ const Footer = () => {
     <li key={link.name}>
       <button
         onClick={(e) => handleLinkClick(link, e)}
-        className="font-aeonik text-gray-300 hover:text-[#b9d1f3] transition-colors duration-300 text-left"
+        className="font-aeonik text-gray-300 hover:text-[#d4a5ff] transition-colors duration-300 text-left"
       >
         {link.name}
       </button>
@@ -113,7 +113,7 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-[#11336e] text-white">
+    <footer className="bg-[#48007e] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-10">
           <div className="grid lg:grid-cols-5 gap-8">

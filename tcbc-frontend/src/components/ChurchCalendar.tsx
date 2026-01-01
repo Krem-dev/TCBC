@@ -52,8 +52,8 @@ const ChurchCalendar: React.FC = () => {
     <section className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#0f2a54] lg:text-5xl">
-            Church <span className="text-[#1a4b9c]">Calendar</span>
+          <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#48007e] lg:text-5xl">
+            Church <span className="text-[#7c01cd]">Calendar</span>
           </h2>
           <p className="font-aeonik mx-auto max-w-3xl text-lg text-gray-600">
             Join us for worship, fellowship, and spiritual growth. Find the perfect event to connect with our community.
@@ -64,26 +64,26 @@ const ChurchCalendar: React.FC = () => {
           {events.map((event) => (
             <div
               key={event.id}
-              className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:border-[#1a4b9c] hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:border-[#7c01cd] hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-bold text-[#0f2a54]">{event.title}</h3>
-                <Calendar className="w-5 h-5 text-[#1a4b9c]" />
+                <h3 className="text-xl font-bold text-[#48007e]">{event.title}</h3>
+                <Calendar className="w-5 h-5 text-[#7c01cd]" />
               </div>
 
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-gray-600">
-                  <Calendar className="w-4 h-4 text-[#1a4b9c]" />
+                  <Calendar className="w-4 h-4 text-[#7c01cd]" />
                   <span className="text-sm font-medium">{event.date}</span>
                 </div>
 
                 <div className="flex items-center gap-3 text-gray-600">
-                  <Clock className="w-4 h-4 text-[#1a4b9c]" />
+                  <Clock className="w-4 h-4 text-[#7c01cd]" />
                   <span className="text-sm font-medium">{event.time}</span>
                 </div>
 
                 <div className="flex items-center gap-3 text-gray-600">
-                  <MapPin className="w-4 h-4 text-[#1a4b9c]" />
+                  <MapPin className="w-4 h-4 text-[#7c01cd]" />
                   <span className="text-sm font-medium">{event.location}</span>
                 </div>
               </div>

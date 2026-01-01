@@ -19,7 +19,7 @@ const PartnersSection: React.FC = () => {
   return (
     <section className="pt-0 pb-4 bg-white">
       <div className="text-center">
-        <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#0f2a54] lg:text-5xl">
+        <h2 className="font-satoshi mb-4 text-4xl font-bold text-[#48007e] lg:text-5xl">
           Ministry Partners
         </h2>
       </div>
