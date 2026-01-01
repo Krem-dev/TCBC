@@ -24,3 +24,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - **UI Components:** shadcn/ui (Radix UI)
 - **Animations:** Framer Motion
 - **Icons:** Lucide React, FontAwesome
+
+
+
+C:\github\TCBC\HplusWebsite
+
+go through this website, its a health website built. i want you to first lookat the technologies used, how the whole structure was built, like this is a cool website. i want the exact website but this time, it won;t be for health but church website, but we can use the exact layout, i mean by exact layout, i want same colors, sizes, desing, like exact, the only change will be the content, i want exactly how the navbar, footer, body everyhting has been done, like exact. the only thing that change swill be contnent, so go throguh it throughly, we wouldnt need to think so much because w ehave the exact thing we wnat to build abd we are creatign the exact replica of it so it should not be tough, posisble without mistakes? we use exact teachnologies also, any questions?
