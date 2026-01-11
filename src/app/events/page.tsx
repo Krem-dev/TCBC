@@ -201,21 +201,21 @@ export default function EventsPage() {
           </div>
 
           {/* Calendar Grid */}
-          <div className="bg-white rounded-lg sm:rounded-2xl shadow-lg overflow-hidden w-full">
+          <div className="bg-white rounded-lg sm:rounded-2xl shadow-lg overflow-x-auto w-full">
             {/* Day Headers */}
-            <div className="grid grid-cols-7 border-b-2 border-gray-200 bg-gray-50 w-full">
+            <div className="grid grid-cols-7 border-b-2 border-gray-200 bg-gray-50 w-full min-w-max sm:min-w-full">
               {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-                <div key={day} className="p-2 sm:p-4 text-center font-satoshi font-semibold text-gray-700 text-xs sm:text-sm flex-1">
+                <div key={day} className="p-2 sm:p-4 text-center font-satoshi font-semibold text-gray-700 text-xs sm:text-sm w-16 sm:flex-1">
                   {day}
                 </div>
               ))}
             </div>
 
             {/* Calendar Days */}
-            <div className="grid grid-cols-7 w-full auto-rows-max">
+            <div className="grid grid-cols-7 w-full min-w-max sm:min-w-full auto-rows-max">
               {/* Empty cells */}
               {Array.from({ length: firstDay }).map((_, i) => (
-                <div key={`empty-${i}`} className="bg-gray-50 h-24 border-r border-b border-gray-200" />
+                <div key={`empty-${i}`} className="bg-gray-50 h-20 sm:h-24 border-r border-b border-gray-200 w-16 sm:flex-1" />
               ))}
 
               {/* Days */}
@@ -226,24 +226,24 @@ export default function EventsPage() {
                 return (
                   <div 
                     key={day} 
-                    className="h-24 p-4 border-r border-b border-gray-200 hover:bg-gray-50 transition-colors flex flex-col"
+                    className="h-20 sm:h-24 p-2 sm:p-4 border-r border-b border-gray-200 hover:bg-gray-50 transition-colors flex flex-col w-16 sm:flex-1"
                   >
-                    <div className="font-satoshi font-semibold text-gray-800 mb-2 text-base">
+                    <div className="font-satoshi font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base">
                       {day}
                     </div>
-                    <div className="flex-1 overflow-y-auto space-y-1 pr-1">
+                    <div className="flex-1 overflow-y-auto space-y-0.5 sm:space-y-1 pr-1">
                       {dayEvents.map((event) => (
                         <button
                           key={event._id}
                           onClick={() => setSelectedEvent(event)}
-                          className={`${categoryColors[event.category]} text-white text-xs px-2 py-1 rounded font-semibold truncate w-full text-left hover:opacity-90 transition block`}
+                          className={`${categoryColors[event.category]} text-white text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-semibold truncate w-full text-left hover:opacity-90 transition block`}
                           title={event.title}
                         >
                           {event.title}
                         </button>
                       ))}
                       {dayEvents.length === 0 && (
-                        <p className="text-xs text-gray-400 italic">No events</p>
+                        <p className="text-xs text-gray-400 italic hidden sm:block">No events</p>
                       )}
                     </div>
                   </div>
